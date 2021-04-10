@@ -1,13 +1,10 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 
 namespace FD.UI.Menu
 {
     public interface IMenuController
     {
-        GameObject[] Menues { get; set; }
+        IElementUI[] Menues { get; }
 
         Action OnGameStarted { get; set; }
         Action OnGameEnded { get; set; }
@@ -23,6 +20,5 @@ namespace FD.UI.Menu
         void ShowStartPanel();
         void ShowOptionsPanel();
         void ShowExitPanel();
-
     }
 }
