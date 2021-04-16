@@ -1,0 +1,19 @@
+{
+  "name": "com.fd.common",
+  "version": "0.1.2",
+  "displayName": "FD-Common",
+  "description": "",
+  "unity": "2020.3",
+  "unityRelease": "1f1",
+  "dependencies": {
+  },
+  "keywords": [
+    "fd",
+    "common"
+  ],
+  "author": {
+    "name": "Nikolay Melnikov",
+    "email": "g0dzZz1lla@yandex.ru",
+    "url": "https://github.com/g0dzZz-coder"
+  }
+}
