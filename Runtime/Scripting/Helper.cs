@@ -21,19 +21,19 @@ namespace FD.Scripting
 
         public static void ShuffleList<T>(List<T> inputList)
         {
-            if (inputList.Count > 0)
+            if (inputList.Count < 1) 
+                return;
+            
+            for (var i = 0; i < inputList.Count; i++)
             {
-                for (var i = 0; i < inputList.Count; i++)
-                {
-                    var swapID = Random.Range(0, inputList.Count);
+                var swapId = Random.Range(0, inputList.Count);
 
-                    if (swapID != i)
-                    {
-                        T tempElement = inputList[swapID];
-                        inputList[swapID] = inputList[i];
-                        inputList[i] = tempElement;
-                    }
-                }
+                if (swapId == i) 
+                    continue;
+                
+                var tempElement = inputList[swapId];
+                inputList[swapId] = inputList[i];
+                inputList[i] = tempElement;
             }
         }
     }

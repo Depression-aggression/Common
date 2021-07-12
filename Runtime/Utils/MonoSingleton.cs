@@ -1,35 +1,33 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace FD.Common
+namespace FD.Utils
 {
     public abstract class MonoSingleton<T> : MonoBehaviour where T : MonoSingleton<T>
     {
         public bool keepAlive = true;
-
-        protected int instancesInScene;
-
-        protected static T instance;
+        
+        private static T _instance;
+        
+        private int _instancesInScene;
 
         public static T Instance
         {
             get
             {
-                if (instance != null)
-                    return instance;
+                if (_instance != null)
+                    return _instance;
 
                 return FindObjectOfType<T>();
             }
         }
 
-        #region Unity methods
-
         protected virtual void Awake()
         {
-            instancesInScene++;
+            _instancesInScene++;
 
             if (Init(Instance, GetComponentName()))
-                instance = (T)this;
+                _instance = (T)this;
         }
 
         protected virtual void Start()
@@ -44,19 +42,17 @@ namespace FD.Common
             if (transform.childCount == 0 && numComponents <= 2)
                 Destroy(gameObject);
 
-            instancesInScene--;
+            _instancesInScene--;
 
             SceneManager.sceneLoaded -= OnSceneLoaded;
 
             if (Instance == this)
-                instance = null;
+                _instance = null;
         }
-
-        #endregion
 
         protected virtual void OnSceneLoaded(Scene scene, LoadSceneMode mode)
         {
-            if (instancesInScene < 2)
+            if (_instancesInScene < 2)
             {
                 if (!keepAlive)
                     DisposeInternal();

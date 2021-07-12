@@ -6,6 +6,8 @@ namespace FD.Editor
 {
     public class GameMenu : EditorWindow
     {
+        private const string ScreenshotPath = "Screenshots";
+        
         [MenuItem("Game/Clear Player Prefs")]
         public static void ClearPlayerPrefs()
         {
@@ -15,17 +17,15 @@ namespace FD.Editor
         [MenuItem("Game/Take Screenshot")]
         public static void TakeScreenshot()
         {
-            var path = "Screenshots";
-
-            Directory.CreateDirectory(path);
+            Directory.CreateDirectory(ScreenshotPath);
 
             int i = 0;
-            while (File.Exists($"{path}/{i}.png"))
+            while (File.Exists($"{ScreenshotPath}/{i}.png"))
             {
                 i++;
             }
 
-            ScreenCapture.CaptureScreenshot($"{path}/{i}.png");
+            ScreenCapture.CaptureScreenshot($"{ScreenshotPath}/{i}.png");
         }
     }
 }

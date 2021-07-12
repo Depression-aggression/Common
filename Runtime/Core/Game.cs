@@ -1,3 +1,4 @@
+using System;
 using System.IO;
 using UnityEngine;
 using UnityEngine.Rendering;
@@ -14,13 +15,13 @@ namespace FD.Core
 
         public static bool IsGameQuitting { get; private set; }
 
+        public static event Action Quitting;
+
         public static void QuitGame()
         {
             IsGameQuitting = true;
-
-            //if (NetworkManager.singleton != null)
-            //    NetworkManager.singleton.StopHost();
-
+            Quitting?.Invoke();
+            
 #if UNITY_EDITOR
             EditorApplication.isPlaying = false;
 #else

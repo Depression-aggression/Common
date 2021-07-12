@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
+using System;
 
-[System.AttributeUsage(System.AttributeTargets.Method)]
+[AttributeUsage(AttributeTargets.Method)]
 public class EditorButtonAttribute : PropertyAttribute
 {
 }
