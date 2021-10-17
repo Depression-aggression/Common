@@ -1,14 +1,16 @@
 {
-  "name": "com.fd.common",
-  "version": "0.1.2",
-  "displayName": "FD-Common",
+  "name": "com.da.common",
+  "version": "0.1.3",
+  "displayName": "DA-Common",
   "description": "",
   "unity": "2020.3",
   "unityRelease": "1f1",
   "dependencies": {
   },
   "keywords": [
-    "fd",
+    "da",
+    "depression",
+    "aggression",
     "common"
   ],
   "author": {

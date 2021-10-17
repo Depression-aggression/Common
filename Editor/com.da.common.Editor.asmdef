@@ -1,9 +1,7 @@
 {
-    "name": "com.fd.common",
+    "name": "com.da.common.Editor",
     "rootNamespace": "",
-    "references": [
-        "Unity.InputSystem"
-    ],
+    "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace FD.Exceptions
+namespace DA.Exceptions
 {
     public class InitializationException : Exception
     {

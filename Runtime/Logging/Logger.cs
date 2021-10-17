@@ -1,11 +1,11 @@
-﻿using FD.Exceptions;
-using Serilog;
+﻿using Serilog;
 using Serilog.Core;
 using Serilog.Events;
 using System;
+using DA.Exceptions;
 using UnityEngine;
 
-namespace FD.Logging
+namespace DA.Logging
 {
     public static class Logger
     {

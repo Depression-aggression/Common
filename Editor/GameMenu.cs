@@ -2,7 +2,7 @@ using System.IO;
 using UnityEditor;
 using UnityEngine;
 
-namespace FD.Editor
+namespace DA.Editor
 {
     public class GameMenu : EditorWindow
     {

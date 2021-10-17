@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 
-namespace FD.Scripting
+namespace DA.Scripting
 {
     public abstract class CoroutineObjectBase
     {

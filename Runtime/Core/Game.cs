@@ -7,7 +7,7 @@ using UnityEngine.Rendering;
 using UnityEditor;
 #endif
 
-namespace FD.Core
+namespace DA.Core
 {
     public static class Game
     {

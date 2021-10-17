@@ -1,6 +1,6 @@
-﻿using FD.Core;
+﻿using DA.Core;
 
-namespace FD.Logging
+namespace DA.Logging
 {
     /// <summary>
     /// The config for <see cref="Logger" />
