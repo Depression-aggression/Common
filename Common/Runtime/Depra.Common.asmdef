@@ -1,10 +1,10 @@
 {
-    "name": "com.da.common.Editor",
+    "name": "Depra.Common",
     "rootNamespace": "",
-    "references": [],
-    "includePlatforms": [
-        "Editor"
+    "references": [
+        "Unity.InputSystem"
     ],
+    "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": false,

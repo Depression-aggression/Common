@@ -1,13 +1,10 @@
 using System;
 using System.IO;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.Rendering;
 
-#if UNITY_EDITOR
-using UnityEditor;
-#endif
-
-namespace DA.Core
+namespace Depra.Common.Runtime
 {
     public static class Game
     {
@@ -32,7 +29,7 @@ namespace DA.Core
         public static string GetGameExecutePath()
         {
 #if UNITY_EDITOR
-            return Directory.GetParent(Application.dataPath).FullName + "/Game";
+            return Directory.GetParent(Application.dataPath)?.FullName + "/Game";
 #else
 			return Directory.GetParent(Application.dataPath).FullName;
 #endif

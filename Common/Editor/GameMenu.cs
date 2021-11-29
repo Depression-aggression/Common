@@ -2,7 +2,7 @@ using System.IO;
 using UnityEditor;
 using UnityEngine;
 
-namespace DA.Editor
+namespace Depra.Common.Editor
 {
     public class GameMenu : EditorWindow
     {
@@ -19,7 +19,7 @@ namespace DA.Editor
         {
             Directory.CreateDirectory(ScreenshotPath);
 
-            int i = 0;
+            var i = 0;
             while (File.Exists($"{ScreenshotPath}/{i}.png"))
             {
                 i++;

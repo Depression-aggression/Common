@@ -1,11 +1,11 @@
 {
-  "name": "com.depression-agression.common",
-  "version": "0.1.4",
-  "displayName": "DA-Common",
-  "unity": "2020.3",
-  "unityRelease": "1f1",
+  "name": "com.depra.common",
+  "version": "0.1.5",
+  "displayName": "Depra-Common",
+  "unity": "2021.2",
+  "unityRelease": "4f1",
   "keywords": [
-    "da",
+    "depra",
     "depression",
     "aggression",
     "common"
@@ -14,5 +14,6 @@
     "name": "Nikolay Melnikov",
     "email": "g0dzZz1lla@yandex.ru",
     "url": "https://github.com/g0dzZz-coder"
-  }
+  },
+  "type": "module"
 }
